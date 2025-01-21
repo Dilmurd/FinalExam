@@ -8,7 +8,6 @@ import pay from "../../assets/pay.png"
 import apple from "../../assets/apple.png"
 import google from "../../assets/google.png"
 import master from "../../assets/master.png"
-import { useMemo } from "react";
 
 function Footer() {
   return (
