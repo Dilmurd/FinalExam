@@ -1,0 +1,57 @@
+footer{
+    .footer__section{
+        .footer__topj{
+            width: 1240px;
+            padding: 43px 64px;
+            display: flex;
+            background-color: #000000;
+            align-items: center;
+            color: #fff;
+            border-radius: 20px;
+            margin: 0 auto;
+            margin-top: 80px;
+            margin-bottom: 1px;
+            .footer__titles{
+                flex: 1;
+                .footer__title{
+                    font-size: 40px;
+                    font-weight: 700;
+                    font-family: int;
+                    max-width: 551px;
+                }
+            }
+            form{
+                .inputs{
+                    width: 349px;
+                    height: 48px;
+                    background-color: #ffff;
+                    border-radius: 62px;
+                    display: flex;
+                    align-items: center;
+                    padding: 17px 16px;
+                    margin-bottom: 14px;
+                    svg{
+                        font-size: 24px;
+                        color: #00000066;
+                        
+                    }
+                    input{
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        padding: 0 10px;
+                    }
+                }
+            }
+    }
+    .footer__btn{
+        padding: 12px 88px;
+        border-radius: 62px;
+        background-color: #fff;
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+        font-family: satoshi;
+    }
+}
+}

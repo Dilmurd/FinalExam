@@ -1,0 +1,96 @@
+.hero{
+    background-size: cover;
+    height: 750px;
+    background-color: #F2F0F1;
+    .hero__wrapper{
+        display: flex;
+        gap: 40px;
+        @media (max-width: 950px) {
+            flex-direction: column;
+        }
+        .hero__text{
+            padding: 103px 0;
+            flex: 1;
+            @media (max-width: 950px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            h1{
+                font-size: 64px;
+                font-weight: 700;
+                font-family: int;
+                max-width: 577px;
+                margin-bottom: 32px;
+                @media (max-width: 700px) {
+                    font-size: 50px; 
+                    text-align: center;        
+                }
+                @media (max-width: 450px) {
+                    font-size: 36px;
+                    max-width: 315px; 
+                    text-align: center  ;        
+                }
+        }
+        .hero__desc{
+            font-size: 16px;
+            font-family: satoshi;
+            font-weight: 400;
+            max-width: 560px;
+            color: #00000099;
+            margin-bottom: 32px;
+            @media (max-width: 700px) {
+                text-align: center;
+            }
+            @media (max-width: 450px) {
+                text-align: center;
+            }
+        }
+        button{
+            padding: 15px 67px;
+            border-radius: 62px;
+            background-color: #000;
+            color: #fff;
+            font-family: satoshi;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 48px;
+            &:hover{
+                background-color: #f2f2f2;
+                color: #000;
+            }
+        }
+        .ratings{
+            display: flex;
+            .rating{
+                border-right: 2px solid #0000001A;
+                padding: 5px;
+                .hero__num{
+                    font-size: 40px;
+                    font-weight: 700;
+                    font-family: satoshi;
+                    @media (max-width: 700px) {
+                        font-size: 30px;
+                    }
+                }
+                .hero__subtitle{
+                    font-size: 16px;
+                    font-family: satoshi;
+                    color: #00000099;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .hero__img{
+        height: 663px;
+        @media (max-width: 950px) {
+            display: none;
+        }
+        img{
+            height: 100%;
+        }
+    }
+}
+}
