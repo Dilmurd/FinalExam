@@ -1,9 +1,9 @@
-import NotFound from "../NotFound/NotFound"
+import Carts from "../../components/Carts/Carts"
 
 function Cart() {
   return (
     <>
-    <NotFound/>
+    <Carts/>
     </>
   )
 }

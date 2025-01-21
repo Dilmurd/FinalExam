@@ -16,7 +16,7 @@ function Customers() {
                     <div className="customer__card">
                     <Rating name="read-only" value={value} readOnly />
                     <div className="customer__user">
-                    <p className="customer__title">Sarah M.</p>
+                    <p className="customer__title">Begzod</p>
                     <PiCheckCircleFill/>
                     </div>
                     <p className="customer__desc">"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
@@ -24,7 +24,7 @@ function Customers() {
                     <div className="customer__card">
                     <Rating name="read-only" value={value} readOnly />
                     <div className="customer__user">
-                    <p className="customer__title">Sarah M.</p>
+                    <p className="customer__title">Doniyor</p>
                     <PiCheckCircleFill/>
                     </div>
                     <p className="customer__desc">"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
@@ -32,7 +32,7 @@ function Customers() {
                     <div className="customer__card">
                     <Rating name="read-only" value={value} readOnly />
                     <div className="customer__user">
-                    <p className="customer__title">Sarah M.</p>
+                    <p className="customer__title">Dilmurod</p>
                     <PiCheckCircleFill/>
                     </div>
                     <p className="customer__desc">"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
@@ -40,7 +40,7 @@ function Customers() {
                     <div className="customer__card">
                     <Rating name="read-only" value={value} readOnly />
                     <div className="customer__user">
-                    <p className="customer__title">Sarah M.</p>
+                    <p className="customer__title">Laylo</p>
                     <PiCheckCircleFill/>
                     </div>
                     <p className="customer__desc">"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>
@@ -48,7 +48,7 @@ function Customers() {
                     <div className="customer__card">
                     <Rating name="read-only" value={value} readOnly />
                     <div className="customer__user">
-                    <p className="customer__title">Sarah M.</p>
+                    <p className="customer__title">Good Baby</p>
                     <PiCheckCircleFill/>
                     </div>
                     <p className="customer__desc">"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”</p>

@@ -1,9 +1,9 @@
-import { GiSettingsKnobs } from "react-icons/gi";
 import "./Comments.scss";
 import { useState, useEffect } from "react";
 import { PiCheckCircleFill } from "react-icons/pi";
 import Rating from "@mui/material/Rating";
 import { useCreateReviewMutation } from "../../redux/slice/slice";
+import settings from "../../assets/settings.png"
 
 function Comments() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -75,9 +75,9 @@ function Comments() {
             </div>
             <div className="comments__sets">
               <div className="comments__icon">
-                <GiSettingsKnobs />
+                <img src={settings} alt="" />
               </div>
-              <button className="comments__btn">Latest</button>
+              <button className="comments__btnss">Latest</button>
               <button
                 className="comments__btn"
                 onClick={() => setModalOpen(true)}
@@ -95,7 +95,7 @@ function Comments() {
                   <PiCheckCircleFill />
                 </div>
                 <p className="customer__desc">{review.text}</p>
-                <p className="customer__date">{review.date}</p> {/* Display the posted date */}
+                <p className="customer__date">{review.date}</p> 
               </div>
             ))}
           </div>
