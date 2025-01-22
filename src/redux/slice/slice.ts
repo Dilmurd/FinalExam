@@ -2,16 +2,16 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const apiSlice = createApi({
   reducerPath: "apiSlice", 
-  baseQuery: fetchBaseQuery({ baseUrl: "https://6787c546c4a42c9161082bb5.mockapi.io" }), 
+  baseQuery: fetchBaseQuery({ baseUrl: "https://6790c4c4af8442fd7377a11d.mockapi.io" }), 
   tagTypes: ["Reviews", "OtherTag"], 
   endpoints: (builder) => ({
     getReviews: builder.query({
-      query: () => "/images",
+      query: () => "/comments",
       providesTags: ["Reviews"],
     }),
     createReview: builder.mutation({
       query: (review) => ({
-        url: "/images",
+        url: "/comments",
         method: "POST",
         body: review,
       }),
