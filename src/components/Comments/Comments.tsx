@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 import { PiCheckCircleFill } from "react-icons/pi";
 import Rating from "@mui/material/Rating";
 import { useCreateReviewMutation } from "../../redux/slice/slice";
-import settings from "../../assets/settings.png"
+import settings from "../../assets/settings.png";
 
 function Comments() {
   const [modalOpen, setModalOpen] = useState(false);
   const [reviewText, setReviewText] = useState("");
-  const [userName, setUserName] = useState(""); 
+  const [userName, setUserName] = useState("");
   const [rating, setRating] = useState<number | null>(5);
   const [reviews, setReviews] = useState<Array<{ name: string; text: string; rating: number; date: string }>>([]);
   const [createReview, { isLoading }] = useCreateReviewMutation();
@@ -22,40 +22,42 @@ function Comments() {
 
   useEffect(() => {
     if (reviews.length > 0) {
-      localStorage.setItem("reviews", JSON.stringify(reviews)); 
+      localStorage.setItem("reviews", JSON.stringify(reviews));
     }
   }, [reviews]);
 
   const handleSubmit = async () => {
-    if (reviewText.trim() && userName.trim()) {
-      try {
-        const currentDate = new Date().toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        });
-
-        const newReview = { 
-          name: userName, 
-          text: reviewText, 
-          rating: rating ?? 5, 
-          date: `Posted on ${currentDate}`
-        };
-
-        await createReview(newReview).unwrap();
-
-        setReviews((prevReviews) => [newReview, ...prevReviews]);
-
-        setReviewText("");
-        setUserName("");
-        setRating(5); 
-        setModalOpen(false);
-        alert("Review successfully added!");
-      } catch (error) {
-        console.error("Failed to add review:", error);
-      }
-    } else {
+    if (!reviewText.trim() || !userName.trim()) {
       alert("Please write a review and provide your name before submitting.");
+      return;
+    }
+
+    const currentDate = new Date().toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+
+    const newReview = {
+      name: userName,
+      text: reviewText,
+      rating: rating ?? 5,
+      date: `Posted on ${currentDate}`,
+    };
+
+    try {
+      await createReview(newReview).unwrap();
+      setReviews((prevReviews) => [newReview, ...prevReviews]);
+
+      setReviewText("");
+      setUserName("");
+      setRating(5);
+      setModalOpen(false);
+      alert("Review successfully added!");
+    } catch (error) {
+      console.log(error);
+      
+      alert("Something went wrong while adding your review.");
     }
   };
 
@@ -95,7 +97,7 @@ function Comments() {
                   <PiCheckCircleFill />
                 </div>
                 <p className="customer__desc">{review.text}</p>
-                <p className="customer__date">{review.date}</p> 
+                <p className="customer__date">{review.date}</p>
               </div>
             ))}
           </div>
@@ -128,6 +130,7 @@ function Comments() {
                 <button
                   className="modal__actions__btn"
                   onClick={() => setModalOpen(false)}
+                  disabled={isLoading}
                 >
                   Cancel
                 </button>
